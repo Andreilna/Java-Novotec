@@ -45,12 +45,15 @@
 
     <script>
         function startGame(){
-            var level = document.getElementById('level').value
+            var level = document.getElementById('level').value;
 
             if(level === ''){
-                alert('Selecione um nível para iniciar!')
+                alert('Selecione um nível para iniciar!');
                 return false;
             }
+
+            // Redireciona para app.html com o nível selecionado
+            window.location.href = 'app.html?level=' + level;
         }
     </script>
     

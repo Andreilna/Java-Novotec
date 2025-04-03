@@ -3,6 +3,23 @@ var width = 0;
 var life = 1;
 var time = 10;
 
+var urlParams = new URLSearchParams(window.location.search);
+var level = urlParams.get('level');
+
+switch (level) {
+    case "normal":
+        time = 30;
+        break;
+    case "dificil":
+        time = 20;
+        break;
+    case "literalmenteImpossivel":
+        time = 10;
+        break;
+    default:
+        time = 10; // Caso padrão
+}
+
 //console.log(height, width);
 
 function adjustSize() { // Ajustar Tamanho
